@@ -1,2 +1,5 @@
 apertura en el MAIN.CPP:
 generarReporte("ArchivoDatos/texto1.txt, "ArchivosDatos/texto2.csv, "Archivos
+```cpp
+generarReporte("archivo.txt");
+```
