@@ -1,5 +1,19 @@
 apertura en el MAIN.CPP:
 generarReporte("ArchivoDatos/texto1.txt, "ArchivosDatos/texto2.csv, "Archivos
-```cpp
-generarReporte("archivo.txt");
-```
+
+en el generarReporte(){
+
+}
+
+debe estar:
+
+elaborarReporte(archAtenciones, archEspecialidades,
+                archPacientes, archSedes, archReporte); //Ojo: aqui los parametros por referencia son del tipo IFSTREAM, 
+                                                        por tanto no deben ser las declaraciones del tipo CONST CHAR  
+
+
+void generarReporte(const char* archivoAtenciones, const char* archivoEspecialidades,
+    const char* archivoPacientes, const char*archivoSedes, const char*archivoReporte) //funcion inicial
+                                      +
+void elaborarReporte(ifstream &archivoAtenciones, ifstream &archivoEspecialidades,  //funcion secundaria invocada
+    ifstream &archivoPacientes, ifstream &archivoSedes, ofstream& archivoReporte) GOOD 
